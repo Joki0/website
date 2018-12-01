@@ -3,11 +3,11 @@ p {
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
-body {
-	height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body{
+                  height:100%
+	margin:0;
+                  background-repeat: no-repeat;
+                  background-attachment:fixed;
 	background-image: linear-gradient(#F99EB2,#FC4069,#FB0C40);
 }
 
@@ -21,16 +21,9 @@ ul {
     top: 0;
     width: 100%;
 }
+
 li {
     float: left;
-}
-
-#i, #i1, #i2 {
-	margin: 10;
-    padding: 10;
-   list-style-type: square;
-   position: relative;
-   width: 100%;
 }
 
 li a {
