@@ -21,9 +21,16 @@ ul {
     top: 0;
     width: 100%;
 }
-
 li {
     float: left;
+}
+
+#i, #i1, #i2 {
+	margin: 10;
+    padding: 10;
+   list-style-type: square;
+   position: relative;
+   width: 100%;
 }
 
 li a {
