@@ -30,6 +30,7 @@ ul {
     width: 100%;
 }
 li {
+	color: white;
     float: left;
 }
 
@@ -38,11 +39,11 @@ li {
 }
 
 #i, #i1, #i2 {
-  margin: 10;
-    padding: 10;
-   list-style-type: circle;
-   position: relative;
-   width: 100%;
+	margin: 10;
+	padding: 10;
+	list-style-type: circle;
+	position: relative;
+	width: 100%;
 }
 
 li a {
@@ -72,6 +73,14 @@ html {
 p {
 
   text-shadow: 1px 1px black;
+  color: white;
+  font-size: 20px;
+}
+h2 {
+
+  text-shadow: 1px 1px black;
+  color: white;
+  size: 3;
 }
 table {
   width:100%;
