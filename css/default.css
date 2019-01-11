@@ -37,7 +37,9 @@ li {
 #drawOnTop {
   z-index: 1;
 }
-
+a:hover {
+  background-color: white;
+}
 #i, #i1, #i2 {
 	margin: 10;
 	padding: 10;
@@ -45,6 +47,44 @@ li {
 	position: relative;
 	width: 100%;
 }
+#d1 {  
+    width: 500px;
+	height: 234px;
+	text-align: center;
+    background: url("https://s.rozali.com/p/m/o/moda-zima-2018-361516-500x334.jpg");
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */ 
+    transition: width 2s, height 2s, transform 2s; 
+} 
+#d2 {
+	width: 500px;
+	height: 234px;
+	text-align: center;
+	background: url("https://s.rozali.com/p/m/o/moda-esen-zima-361961-500x0.jpg");
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */ 
+    transition: width 2s, height 2s, transform 2s; 
+}
+#d3 {
+	width: 500px;
+	height: 234px;
+	text-align: center;
+	background: url("https://s.rozali.com/p/m/o/moda-plastove-361523-500x0.jpg");
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */ 
+    transition: width 2s, height 2s, transform 2s; 
+}
+#d4 {
+	width: 500px;
+	height: 234px;
+	text-align: center;
+	background: url("https://s.rozali.com/p/p/o/poncho-nametalo-361521-500x0.jpg");
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */ 
+    transition: width 2s, height 2s, transform 2s; 
+}
+#d1:hover,#d2:hover,#d3:hover,#d4:hover { 
+    width: 500px; 
+    height: 334px; 
+    -webkit-transform: rotate(180deg); /* Safari */ 
+    transform: rotate(360deg); 
+} 
 
 li a {
     display: block;
