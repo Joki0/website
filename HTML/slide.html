@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>ZADACHA</title>
+	<style>
+	html { 
+        background: url('gradient.jpg') no-repeat center fixed; 
+        background-size: cover;
+    }
+	</style>
+	<style>
+	html { 
+        background: url('gradient.jpg') no-repeat center fixed; 
+        background-size: cover;
+    }
+	</style>
+	<script type="text/javascript">
+		var slideimages = new Array() // create new array to preload images
+		slideimages[0] = new Image() // create new instance of image object
+		slideimages[0].src = "./slideshow/1.png" // set image object src property to an image's src, preloading that image in the process
+		slideimages[1] = new Image()
+		slideimages[1].src = "./slideshow/2.png"
+		slideimages[2] = new Image()
+		slideimages[2].src = "./slideshow/3.jpg"
+		slideimages[3] = new Image()
+		slideimages[3].src = "./slideshow/4.jpg"
+		slideimages[4] = new Image()
+		slideimages[4].src = "./slideshow/5.jpg"
+		slideimages[5] = new Image()
+		slideimages[5].src = "./slideshow/6.png"
+		slideimages[6] = new Image()
+		slideimages[6].src = "./slideshow/7.jpg"
+		slideimages[7] = new Image()
+		slideimages[7].src = "./slideshow/8.jpg"
+		slideimages[8] = new Image()
+		slideimages[8].src = "./slideshow/9.png"
+	</script>
+</head>
+<body onload=slideit();>
+	<a href="javascript:slidelink()">
+	<img src="./slideshow/1.png" id="slide" /></a>
+	<script type="text/javascript">
+
+	var i = 0;
+	var whichimage = 0;
+
+	function slideit(){
+	//ako browsera ne poddurja - exit
+	if (!document.images)
+	return
+	document.getElementById('slide').src = slideimages[i].src;
+	whichimage = i;
+	if (i<9) {i++;};
+	if (i>=9) {i=0;};
+	//vikam slideit() na vseki 3.5 sekundi
+	setTimeout("slideit()",3500);
+	}
+	
+	//linkove za kartinkite - wont do 4 now unless required
+	function slidelink(){
+		if (whichimage == 0) window.location = "link1.html";
+		else if (whichimage == 1) window.location = "link2.html";
+		else if (whichimage == 2) window.location = "link3.html";
+		else if (whichimage == 3) window.location = "link4.html";
+		else if (whichimage == 4) window.location = "link5.html";
+		else if (whichimage == 5) window.location = "link6.html";
+		else if (whichimage == 6) window.location = "link7.html";
+		else if (whichimage == 7) window.location = "link8.html";
+		else if (whichimage == 8) window.location = "link9.html";
+	}
+</script>
+</body>
+</html>

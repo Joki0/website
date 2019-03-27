@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Тестове по математика за подготовка за изпита след 7 клас</title>
+<link rel="stylesheet" href="../css/default.css">
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<script>			
+			var trueans = new Array(1,2,1,0,1,3,0,2,1,3,
+								    3,1,0,3,2,1,1,3,3,1);
+			var ans = new Array(20);
+	//parseInt(s) - The parseInt() function parses a string and returns an integer.
+	//parseInt(string,radix); Required. The string to be parsed; Optional. A number (from 2 to 36) that represents the numeral system to be used
+	//parseInt(s) - A Number. If the first character cannot be converted to a number, NaN is returned
+	//charAt(0) - The charAt() method returns the character at the specified index in a string
+			function clickF(str){
+				if(str.length==2){
+					var s = str.charAt(0);
+					s = parseInt(s);
+					ans[s]=parseInt(str.charAt(1));
+				}
+				else{
+					var s = str.substring(0,2);
+					s = parseInt(s);
+					ans[s]=parseInt(str.charAt(2));
+				}
+			}
+	
+			function subm(){
+				var br=0;
+				for(var i=0;i < trueans.length; i++)
+					if(ans[i] != trueans[i]) br++;
+				
+				w = window.open("", "" ,"status=no, width=430,height=300");
+				w.document.write("<html><body><h2 align=center>Резултат</h2>");
+				w.document.title="Отговори";
+				
+				w.document.write("Вашите верни отговори са <b>"+(ans.length - br)+"</b>.<br />");
+				w.document.write("Отогворили сте грешно на <b>"+br+"</b> въпроса.<br />");
+				if(br != 0){
+					w.document.write("Грешни са следните отговори:<br />");
+					for(var i=0;i < trueans.length; i++){
+						if(ans[i] != trueans[i]){ w.document.write("<b>"+(i+1)+"</b> &nbsp;&nbsp;&nbsp;&nbsp;");}
+					}
+				}
+				w.document.write("<form><input type='button' value='Затвори' onClick='self.close()'></form></body></html>");
+			}
+		</script>
+</head>
+<body>
+<font color="white" face="">
+<style>b,#text {
+text-shadow: 1px 1px rgba(0,0,0,1);
+}
+</style>
+<center>
+<p id="t2">Beauty is in everyone</p>
+</center>
+<ul id="drawOnTop">
+  <li><a href="../Index/index.html">Начало</a></li>
+  <li><a href="../forms/formHub.html">Forms Hub</a></li>
+  <li style="float:right"><a class="active" href="../HTML/noviTrendove.html">Нови трендове</a></li>
+</ul>
+<form>
+    <b> Задача 1.</b> Числената стойност на израза 1/5 + 1/50 + 1/500 е:
+	<br />
+       <input type="radio" name="n0" onClick="clickF('00')" />3/555 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n0" onClick="clickF('01')" />111/500 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n0" onClick="clickF('02')" />111/555 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n0" onClick="clickF('03')" />3/500
+       <br />
+       <br /><b> Задача 2.</b> Коефициентът на едночлена (2x<sup>3</sup>y)<sup>3</sup>.(-7xy<sup>3</sup>) e:
+       <br />
+       <input type="radio" name="n1" onClick="clickF('10')" />-14 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n1" onClick="clickF('11')" />-42 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n1" onClick="clickF('12')" />-56 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n1" onClick="clickF('13')" />56 &nbsp;&nbsp;&nbsp;&nbsp;
+       <br />
+       <br /><b> Задача 3.</b> 25% от кое число са равни на 50% на 40:
+       <br />
+       <input type="radio" name="n2" onClick="clickF('20')" />100 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n2" onClick="clickF('21')" />80 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n2" onClick="clickF('22')" />40 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n2" onClick="clickF('23')" />20 &nbsp;&nbsp;&nbsp;&nbsp;
+       <br />
+       <br /><b> Задача 4.</b> Страната на квадрат е 12 см. Лицето на квадрата в квадратни дециметри е:
+       <br />
+       <input type="radio" name="n3" onClick="clickF('30')" />1,44 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n3" onClick="clickF('31')" />14,4 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n3" onClick="clickF('32')" />1440 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n3" onClick="clickF('33')" />0,144 <br />
+       <br /><b> Задача 5.</b> Стойността на израза 104<sup>2</sup> + 208.96 + 96<sup>2</sup> е:<br />
+       <input type="radio" name="n4" onClick="clickF('40')" />4 000&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n4" onClick="clickF('41')" />40 000&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n4" onClick="clickF('42')" />20 000&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n4" onClick="clickF('43')" />2 000<br />
+       <br /><b> Задача 6. </b>  Каква част от 1,5 часа са 45 минути:
+       <br />
+       <input type="radio" name="n5" onClick="clickF('50')" />3 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n5" onClick="clickF('51')" />0,2 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n5" onClick="clickF('52')" />4,5 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n5" onClick="clickF('53')" />0,5 <br />
+       <br /><b> Задача 7.</b>  От колко лева 90 ст. са 30%:
+       <br />
+       <input type="radio" name="n6" onClick="clickF('60')" />3 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n6" onClick="clickF('61')" />2,7 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n6" onClick="clickF('62')" />0,30 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n6" onClick="clickF('63')" />300
+       <br />
+       <br /><b> Задача 8.</b> Числената стойност на израза а<sup>2</sup> - 1 - (а - 1)(а + 2) при а 0,19 е:
+
+       <br />
+       <input type="radio" name="n7" onClick="clickF('70')" />-2,81 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n7" onClick="clickF('71')" />-1,19 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n7" onClick="clickF('72')" />0,81 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n7" onClick="clickF('73')" />-3,19 &nbsp;&nbsp;&nbsp;&nbsp;
+       <br /><b> Задача 9.</b>Семейство изразходва 3/7 от месечния си бюджет за отопление и му остават още 420 лв. Месечният бюджет на това семейство е: 
+       <br />
+       <input type="radio" name="n8" onClick="clickF('80')" />600 &nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n8" onClick="clickF('81')" />735 &nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n8" onClick="clickF('82')" />700 &nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n8" onClick="clickF('83')" />980 &nbsp;&nbsp;&nbsp;<br/>
+       <br /><b> Задача 10.</b> Ъгъл, който е 150% от своя съседен, е равен на: 
+       <br />
+       <input type="radio" name="n9" onClick="clickF('90')" />75&deg; &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n9" onClick="clickF('91')" />150&deg; &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n9" onClick="clickF('92')" />72&deg; &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n9" onClick="clickF('93')" />108&deg; <br />
+       <br /><b> Задача 11.</b> Камион изминава 100 метра за 5 секунди. Скоростта на камиона в км/ч е:
+       <br />
+       <input type="radio" name="n10" onClick="clickF('100')" />20 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n10" onClick="clickF('101')" />36 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n10" onClick="clickF('102')" />50 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n10" onClick="clickF('103')" />72 <br />
+       <br /><br /><b> Задача 12.</b> Стойността на израза(-1)<sup>1</sup> + (-1)<sup>2</sup> + (-1)<sup>3</sup> + ... +(-1)<sup>2007</sup> е:<br />
+       <input type="radio" name="n11" onClick="clickF('110')" />1 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n11" onClick="clickF('111')" />-1 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n11" onClick="clickF('112')" />0 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n11" onClick="clickF('113')" />-2 <br />
+       
+       <br /><br /><b>Задача 13.</b> Ако ръбовете на един куб се увеличат 3 пъти, обемът на получения куб ще се увеличи: <br />
+       <input type="radio" name="n13" onClick="clickF('130')" />3 пъти &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n13" onClick="clickF('131')" />9 пъти &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n13" onClick="clickF('132')" />18 пъти &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n13" onClick="clickF('133')" />27 пъти <br />
+       <br /><br /><b>  Задача 14.</b>Стойността на израза  |5 - 3:(1/3)| - |7:(1/2) - 5| - (-3) е:<br />
+       <input type="radio" name="n14" onClick="clickF('140')" />-10 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n14" onClick="clickF('141')" />4,5 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n14" onClick="clickF('142')" />-2 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n14" onClick="clickF('143')" />2 <br />
+       <br /><br /><b> Задача 15.</b> Разликата А – В на многочлените А = - х + х<sup>2</sup> – 3 и В = - х<sup>2</sup> – х – 3 е:<br />
+       <input type="radio" name="n15" onClick="clickF('150')" />2x<sup>2</sup> - 2x &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n15" onClick="clickF('151')" />2x &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n15" onClick="clickF('152')" />2x<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n15" onClick="clickF('153')" />-2x<sup>2</sup> <br />
+       <br /><br /><b> Задача 16. </b> Стойността на израза (6<sup>6</sup> - 6<sup>4</sup>)/(6<sup>5</sup> + 6<sup>4</sup>) е:<br /> 
+       <input type="radio" name="n16" onClick="clickF('160')" />6 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n16" onClick="clickF('161')" />5 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n16" onClick="clickF('162')" />11/7 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n16" onClick="clickF('163')" />2 <br />
+       <br /><br /><b> Задача 17.</b>  Изразът [(-1/3) + <i>x</i>]<sup>2</sup> е тъждествено равен на:<br />
+       <input type="radio" name="n71" onClick="clickF('170')" />-1/9 + 2<i>x</i>/3 + <i>x</i><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n71" onClick="clickF('171')" />1/9 + 2<i>x</i>/3 + <i>x</i><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n71" onClick="clickF('172')" />-1/9 - 2<i>x</i>/3 + <i>x</i><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n71" onClick="clickF('173')" />1/9 - <i>x</i>/3 + <i>x</i><sup>2</sup><br />
+       <br /><br /><b> Задача 18. </b> Целите отрицателни решения на неравенството 3<i>x</i> - 3<sup>2</sup> < 4[<i>x</i> - (3/2)] са: <br />
+       <input type="radio" name="n18" onClick="clickF('180')" />-3; -2 и -1 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n18" onClick="clickF('181')" />-2; -1 и 0 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n18" onClick="clickF('182')" />-3;-2;-1 и 0 &nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n18" onClick="clickF('183')" />-2 и -1 <br />
+       
+       <br /><br /><b> Задача 19. </b> Произведението (3<i>a</i> + <i>b</i>)(<i>b</i> - 3<i>a</i>) НЕ е равно на:<br />
+       <input type="radio" name="n20" onClick="clickF('200')" /> (<i>b</i> + 3<i>a</i>)(<i>b</i> - 3<i>a</i>)&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n20" onClick="clickF('201')" /> <i>b</i><sup>2</sup> - 9<i>a</i><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n20" onClick="clickF('202')" /> 9<i>a</i><sup>2</sup> - <i>b</i><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n20" onClick="clickF('203')" /> -9<i>a</i><sup>2</sup> + <i>b</i><sup>2</sup><br />
+       <br /><br /><b> Задача 20. </b> Решенията на уравнението (3x - 2)(2x + 6) = 0 са:<br />
+       <input type="radio" name="n21" onClick="clickF('210')" /> -2/3 и -3&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n21" onClick="clickF('211')" /> -2/3 и 3&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n21" onClick="clickF('212')" /> 2/3 и 3&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="radio" name="n21" onClick="clickF('213')" /> -3 и 2/3<br />
+
+<hr />
+<p>
+	<input type="button" value="Проверете теста" name="submit" onClick="subm(true)" />
+</p>
+</form>
+</body>
+</html>

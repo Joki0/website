@@ -1,0 +1,81 @@
+﻿<html>
+<title>Анкета
+</title>
+<head>
+<link rel="stylesheet" href="../css/default.css">
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<meta charset='utf-8'>
+<script>
+function check() {
+var x = document.getElementById("name1").value;
+    if (document.getElementById("m").checked ==true){var y=document.getElementById("m").value;}
+	else {var y="Жена";};
+var z = document.getElementById("mat").value;
+    alert ("d");
+   if (document.getElementById("d").checked ==true){var d=document.getElementById("d").value;}
+  else if (document.getElementById("n").checked ==true){var d=document.getElementById("n").value;};
+
+var w = window.open("", "" , "width=430,height=300");
+				w.document.write("<html><body><h2 align=center>Резултат</h2>");
+				w.document.title="Отговори";
+				w.document.write("Вашето училище е: <b>"+x+"</b>.<br />");
+				w.document.write("Вашият пол е:"+y+"</b><br />");
+			    w.document.write("Втора матура:"+d+"</b><br />");
+				w.document.write("Избор на втора матура:"+z+"</b><br />");
+				w.document.write("<form><input type='button' value='Затвори' onClick='self.close()'></form></body></html>");
+}
+</script>
+</head>
+<body>
+<center>
+<p id="t2">Beauty is in everyone</p>
+</center>
+<ul id="drawOnTop">
+  <li><a href="../Index/index.html">Начало</a></li>
+  <li><a href="../forms/formHub.html">Forms Hub</a></li>
+  <li style="float:right"><a class="active" href="../HTML/noviTrendove.html">Нови трендове</a></li>
+</ul>
+<form> <h1>Анкета</h1>
+<p>
+ Училище: <br>
+<input type="text" size=50 id="name1"> <br>
+Пол:<br>
+<input type="radio" id="m" name=pol value="Мъж"> Мъж<br>
+<input type="radio" id="f" name=pol value="Жена"> Жена <br>
+
+1. По какво мислите да държите втора матура?
+<br>
+<input type="text" size=50 id="mat"> <br>
+
+
+2. Веднага след завършване на средното си образование ли ще се насочите към втора матура?
+<br>
+<input type="radio" name="d" id=d value="Да"> Да <br>
+<input type="radio" name="d" id=n value="Не"> Не <br>
+
+3. В коя държава мислите да следвате? 
+<br>
+<input type="checkbox" name="janr"> България <br>
+<input type="checkbox" name="janr"> САЩ <br>
+<input type="checkbox" name="janr"> Германия <br>
+<input type="checkbox" name="janr"> Великобритания <br>
+<input type="checkbox" name="janr"> Австрия <br>
+<input type="checkbox" name="janr"> Франция <br>
+<input type="checkbox" name="janr"> Италия <br>
+<input type="checkbox" name="janr"> Испания <br>
+ Друга: <input type="text" size="42" name="other"> <br>
+4.Ако сте избрали България, в кой университет ще кандидатствате?
+<br>
+<input type="text" size=50 name="uni">
+<br>
+
+5. Каква специалност ще следвате?<br>
+<input type="text" size=50 name="sp">
+<br>
+<input type="reset"> &nbsp
+<input type="submit" onclick=check()>
+ 
+ 
+</form>
+</body>
+</html>

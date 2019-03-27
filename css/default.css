@@ -3,6 +3,11 @@
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
+#t2 {
+  font: 0 50px 'Cookie', Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
 body {
   height: 100%;
     margin: 0;
@@ -85,7 +90,6 @@ a:hover {
     -webkit-transform: rotate(180deg); /* Safari */ 
     transform: rotate(360deg); 
 } 
-
 li a {
     display: block;
     color: white;
