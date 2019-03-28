@@ -64,5 +64,51 @@
   <br><br>
   <input type="submit" value="Submit">
 </font>
+<script>
+function check() {
+
+    if (document.getElementById("m").checked ==true){
+	var y = document.getElementById("m").value;
+	document.getElementById("f").setAttribute("style", "color: #00FF99;") }
+	else {
+	var y = document.getElementById("f").value;
+	document.getElementById("f").setAttribute("style", "color: #FFFFFF;")
+	}
+var z = document.getElementById("ime").value;
+var z1 = document.getElementById("post").value;
+var w = window.open("", "" , "width=430,height=300");
+				w.document.write("<html><body><h2 align=center>Резултат</h2>");
+				w.document.title="Отговори";
+				w.document.write("Вашият пол е: <b>"+y+"</b><br />");
+				w.document.write("Трите Ви имена са:<b>"+z+"</b>.<br />");
+			    w.document.write("Вашата елекронна поща е: <b>"+z1+"</b><br />");
+				w.document.write("<form><input type='button' value='Затвори' onClick='self.close()'></form></body></html>");
+}
+</script>
+</head>
+<body>
+<font color="white" size="3" face="Tahoma">
+<form> <h1>Анкета</h1>
+<p> Ако искате да сте наясно с новосите в сайта, попълнете кратката ни анкета: <br>
+Пол:<br>
+<input type="radio" id="m" name=pol value="Мъж"> Мъж<br>
+<input type="radio" id="f" name=pol value="Жена"> Жена <br>
+
+1.Трите Ви имена
+<br>
+<input type="text" size=50 id="ime"> <br>
+
+2.Вашата електронна поща:
+<br>
+<input type="text" size=50 id="post">
+<br>
+<p> 
+<input type="button" value="Submit" name="submit" onClick="check()" />
+</p>
+
+ 
+</form>
+</font>
+</body>
 </BODY>
 </HTML>
